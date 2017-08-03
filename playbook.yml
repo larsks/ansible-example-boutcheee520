@@ -1,0 +1,4 @@
+- hosts: linux_general
+  gather_facts: no
+  roles:
+    - role: my_role

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Copying over env.sh...
+      template:
+        src: "{{ item.source }}"
+        dest: "{{ item.destination }}"
+      with_items:
+        - source: 'env.sh.j2'
+          destination: '/tmp/env.sh'
+  tags: ['config']
